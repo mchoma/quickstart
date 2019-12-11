@@ -18,6 +18,7 @@ package org.jboss.as.quickstarts.ejb.remote.stateless;
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
+import org.jboss.as.security.api.ConnectionSecurityContext;
 
 /**
  * @author Jaikiran Pai
@@ -28,6 +29,7 @@ public class CalculatorBean implements RemoteCalculator {
 
     @Override
     public int add(int a, int b) {
+        System.out.println(ConnectionSecurityContext.getConnectionPrincipals());
         return a + b;
     }
 

@@ -53,6 +53,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.jboss.eap</groupId>
+            <artifactId>wildfly-security-api</artifactId>
+	    <version>7.2.5.GA-redhat-00002</version>
+        </dependency>
+
     </dependencies>
 
     <build>
